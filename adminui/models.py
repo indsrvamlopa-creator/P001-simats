@@ -26,7 +26,7 @@ class Problem(models.Model):
     created_by = models.ForeignKey(
         User,
         on_delete=models.SET_NULL,
-        null=True,
+        null=True,  
         blank=True,
         related_name="uploaded_problems"
     )

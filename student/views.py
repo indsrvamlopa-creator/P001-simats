@@ -23,7 +23,7 @@ def register_login(request):
             department = request.POST.get("department")
 
             if Student.objects.filter(student_id=student_id).exists():
-                messages.error(request, "Student ID already registered.", extra_tags='student')
+                messages.error(request, "student id exists", extra_tags='student')
             else:
                 Student.objects.create(
                     full_name=full_name,
